@@ -1,0 +1,84 @@
+﻿@model QuanLySinhVien.Models.giangvien
+@{
+    ViewBag.Title = "TaiKhoanCuaToi";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>
+
+    <label style="color: orange; font-weight:bold; font-size:40px; margin-bottom: 5px">|</label>
+    Thông tin cá nhân
+
+</h2>
+@using (Html.BeginForm("TaiKhoanCuaToi", "DangNhap", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+
+    @Html.AntiForgeryToken()
+    <div>
+        <table style="width:650px" class="table">
+            <tr>
+                <td>Mã giảng viên</td>
+                <td>
+                    @Html.EditorFor(model => model.maGV, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                </td>
+            </tr>
+
+            <tr>
+                <td>Tên đăng nhập</td>
+                <td>
+                    @Html.EditorFor(model => model.tenDangNhap, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                </td>
+            </tr>
+
+            <tr>
+                <td>Họ tên</td>
+                <td>
+                    @Html.EditorFor(model => model.hoTen, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.hoTen, "", new { @class = "text-danger" })
+                </td>
+            </tr>
+            <tr>
+                <td>Địa chỉ</td>
+                <td>
+                    @Html.EditorFor(model => model.diachi, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.diachi, "", new { @class = "text-danger" })
+                </td>
+            </tr>
+            <tr>
+                <td>SĐT</td>
+                <td>
+                    @Html.EditorFor(model => model.sdt, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.sdt, "", new { @class = "text-danger" })
+                </td>
+            </tr>
+            <tr>
+                <td>Ảnh</td>
+                <td>
+                    @{
+                        string path = "~/Content/Images/" + Model.hinhAnh;
+                    }
+                    @Html.HiddenFor(model => model.hinhAnh)
+
+                    <img id="output" class="img-round" alt="ảnh" width="180" src="@Url.Content(path)" />
+                    <p>
+                        <label for="ufile" style="cursor: pointer">Chọn file ảnh</label>
+                    </p>
+                    <input name="ImageFile" id="ufile" type="file" style="display: none" onchange="loadFile(event)" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="border: none">
+                    <input type="submit" value="Lưu thông tin" class="btn" role="button" style="background-color: #0FC2C2; font-weight:bold; color: white; border-radius:30px; height:50px; width:200px; float: right" />
+                    <a href="/DangNhap/SetPass" class="btn" role="button" style="background-color: darkcyan; font-weight:bold; color: white; border-radius:30px; height:50px; width:200px; float: right; margin-right: 20px"> Đổi mật khẩu</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+}
+<script>
+    var loadFile = function (event) {
+        var image = document.getElementById("output");
+        image.src = URL.createObjectURL(event.target.files[0]);
+    };
+</script>
+

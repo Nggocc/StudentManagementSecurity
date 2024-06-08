@@ -1,0 +1,152 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\EDU\\K\u00CC 2 2023-2024\\ATBM\\QLSV\\QuanLySinhVien\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B9FA7A2E-6A9F-43BF-BD3A-821712E043D1}|QuanLySinhVien\\QuanLySinhVien.csproj|d:\\edu\\k\u00EC 2 2023-2024\\atbm\\qlsv\\quanlysinhvien\\quanlysinhvien\\controllers\\sinhvienscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9FA7A2E-6A9F-43BF-BD3A-821712E043D1}|QuanLySinhVien\\QuanLySinhVien.csproj|solutionrelative:quanlysinhvien\\controllers\\sinhvienscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9FA7A2E-6A9F-43BF-BD3A-821712E043D1}|QuanLySinhVien\\QuanLySinhVien.csproj|d:\\edu\\k\u00EC 2 2023-2024\\atbm\\qlsv\\quanlysinhvien\\quanlysinhvien\\models\\sinhvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9FA7A2E-6A9F-43BF-BD3A-821712E043D1}|QuanLySinhVien\\QuanLySinhVien.csproj|solutionrelative:quanlysinhvien\\models\\sinhvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9FA7A2E-6A9F-43BF-BD3A-821712E043D1}|QuanLySinhVien\\QuanLySinhVien.csproj|D:\\EDU\\K\u00CC 2 2023-2024\\ATBM\\QLSV\\QuanLySinhVien\\quanlysinhvien\\views\\sinhviens\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B9FA7A2E-6A9F-43BF-BD3A-821712E043D1}|QuanLySinhVien\\QuanLySinhVien.csproj|solutionrelative:quanlysinhvien\\views\\sinhviens\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9FA7A2E-6A9F-43BF-BD3A-821712E043D1}|QuanLySinhVien\\QuanLySinhVien.csproj|D:\\EDU\\K\u00CC 2 2023-2024\\ATBM\\QLSV\\QuanLySinhVien\\quanlysinhvien\\views\\sinhviens\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B9FA7A2E-6A9F-43BF-BD3A-821712E043D1}|QuanLySinhVien\\QuanLySinhVien.csproj|solutionrelative:quanlysinhvien\\views\\sinhviens\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9FA7A2E-6A9F-43BF-BD3A-821712E043D1}|QuanLySinhVien\\QuanLySinhVien.csproj|D:\\EDU\\K\u00CC 2 2023-2024\\ATBM\\QLSV\\QuanLySinhVien\\quanlysinhvien\\views\\dangnhap\\setpass.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B9FA7A2E-6A9F-43BF-BD3A-821712E043D1}|QuanLySinhVien\\QuanLySinhVien.csproj|solutionrelative:quanlysinhvien\\views\\dangnhap\\setpass.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9FA7A2E-6A9F-43BF-BD3A-821712E043D1}|QuanLySinhVien\\QuanLySinhVien.csproj|D:\\EDU\\K\u00CC 2 2023-2024\\ATBM\\QLSV\\QuanLySinhVien\\quanlysinhvien\\views\\sinhviens\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B9FA7A2E-6A9F-43BF-BD3A-821712E043D1}|QuanLySinhVien\\QuanLySinhVien.csproj|solutionrelative:quanlysinhvien\\views\\sinhviens\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9FA7A2E-6A9F-43BF-BD3A-821712E043D1}|QuanLySinhVien\\QuanLySinhVien.csproj|D:\\EDU\\K\u00CC 2 2023-2024\\ATBM\\QLSV\\QuanLySinhVien\\quanlysinhvien\\views\\sinhviens\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B9FA7A2E-6A9F-43BF-BD3A-821712E043D1}|QuanLySinhVien\\QuanLySinhVien.csproj|solutionrelative:quanlysinhvien\\views\\sinhviens\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 372,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\EDU\\K\u00CC 2 2023-2024\\ATBM\\QLSV\\QuanLySinhVien\\QuanLySinhVien\\Views\\sinhviens\\Index.cshtml",
+              "RelativeDocumentMoniker": "QuanLySinhVien\\Views\\sinhviens\\Index.cshtml",
+              "ToolTip": "D:\\EDU\\K\u00CC 2 2023-2024\\ATBM\\QLSV\\QuanLySinhVien\\QuanLySinhVien\\Views\\sinhviens\\Index.cshtml",
+              "RelativeToolTip": "QuanLySinhVien\\Views\\sinhviens\\Index.cshtml",
+              "ViewState": "AQIAAGAAAAAAAAAAAAAAAGwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-28T15:27:24.456Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "sinhviensController.cs",
+              "DocumentMoniker": "D:\\EDU\\K\u00CC 2 2023-2024\\ATBM\\QLSV\\QuanLySinhVien\\QuanLySinhVien\\Controllers\\sinhviensController.cs",
+              "RelativeDocumentMoniker": "QuanLySinhVien\\Controllers\\sinhviensController.cs",
+              "ToolTip": "D:\\EDU\\K\u00CC 2 2023-2024\\ATBM\\QLSV\\QuanLySinhVien\\QuanLySinhVien\\Controllers\\sinhviensController.cs",
+              "RelativeToolTip": "QuanLySinhVien\\Controllers\\sinhviensController.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAAACQAAACNAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-28T15:27:06.284Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "sinhvien.cs",
+              "DocumentMoniker": "D:\\EDU\\K\u00CC 2 2023-2024\\ATBM\\QLSV\\QuanLySinhVien\\QuanLySinhVien\\Models\\sinhvien.cs",
+              "RelativeDocumentMoniker": "QuanLySinhVien\\Models\\sinhvien.cs",
+              "ToolTip": "D:\\EDU\\K\u00CC 2 2023-2024\\ATBM\\QLSV\\QuanLySinhVien\\QuanLySinhVien\\Models\\sinhvien.cs",
+              "RelativeToolTip": "QuanLySinhVien\\Models\\sinhvien.cs",
+              "ViewState": "AQIAABoAAAAAAAAAAAAAwCYAAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-08T19:12:16.835Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8b06f53-6d01-11d2-aa7d-00c04f990343}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\EDU\\K\u00CC 2 2023-2024\\ATBM\\QLSV\\QuanLySinhVien\\QuanLySinhVien\\Views\\sinhviens\\Create.cshtml",
+              "RelativeDocumentMoniker": "QuanLySinhVien\\Views\\sinhviens\\Create.cshtml",
+              "ToolTip": "D:\\EDU\\K\u00CC 2 2023-2024\\ATBM\\QLSV\\QuanLySinhVien\\QuanLySinhVien\\Views\\sinhviens\\Create.cshtml",
+              "RelativeToolTip": "QuanLySinhVien\\Views\\sinhviens\\Create.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAB2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-08T18:49:45.962Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SetPass.cshtml",
+              "DocumentMoniker": "D:\\EDU\\K\u00CC 2 2023-2024\\ATBM\\QLSV\\QuanLySinhVien\\QuanLySinhVien\\Views\\DangNhap\\SetPass.cshtml",
+              "RelativeDocumentMoniker": "QuanLySinhVien\\Views\\DangNhap\\SetPass.cshtml",
+              "ToolTip": "D:\\EDU\\K\u00CC 2 2023-2024\\ATBM\\QLSV\\QuanLySinhVien\\QuanLySinhVien\\Views\\DangNhap\\SetPass.cshtml",
+              "RelativeToolTip": "QuanLySinhVien\\Views\\DangNhap\\SetPass.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-08T18:38:39.191Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "D:\\EDU\\K\u00CC 2 2023-2024\\ATBM\\QLSV\\QuanLySinhVien\\QuanLySinhVien\\Views\\sinhviens\\Details.cshtml",
+              "RelativeDocumentMoniker": "QuanLySinhVien\\Views\\sinhviens\\Details.cshtml",
+              "ToolTip": "D:\\EDU\\K\u00CC 2 2023-2024\\ATBM\\QLSV\\QuanLySinhVien\\QuanLySinhVien\\Views\\sinhviens\\Details.cshtml",
+              "RelativeToolTip": "QuanLySinhVien\\Views\\sinhviens\\Details.cshtml",
+              "ViewState": "AQIAACwAAAAAAAAAAAAAADoAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-08T18:29:12.889Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "D:\\EDU\\K\u00CC 2 2023-2024\\ATBM\\QLSV\\QuanLySinhVien\\QuanLySinhVien\\Views\\sinhviens\\Edit.cshtml",
+              "RelativeDocumentMoniker": "QuanLySinhVien\\Views\\sinhviens\\Edit.cshtml",
+              "ToolTip": "D:\\EDU\\K\u00CC 2 2023-2024\\ATBM\\QLSV\\QuanLySinhVien\\QuanLySinhVien\\Views\\sinhviens\\Edit.cshtml",
+              "RelativeToolTip": "QuanLySinhVien\\Views\\sinhviens\\Edit.cshtml",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAACEAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-28T19:29:43.139Z"
+            }
+          ]
+        },
+        {
+          "DockedHeight": 28,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

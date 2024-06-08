@@ -1,0 +1,61 @@
+﻿@model QuanLySinhVien.Models.taikhoan
+@{
+    ViewBag.Title = "SetPass";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .inp{
+        width: 280px;
+        border: lightgray 1px solid;
+        height: 45px;
+        border-radius: 10px;
+    }
+</style>
+<h2>
+
+    <label style="color: orange; font-weight:bold; font-size:40px; margin-bottom: 5px">|</label>
+    Đổi mật khẩu
+
+</h2>
+@if (@ViewBag.Error != null)
+{
+    <div class="alert alert-danger">@ViewBag.Error</div>
+
+}
+
+@using (Html.BeginForm("SetPass", "DangNhap", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+
+    @Html.AntiForgeryToken()
+    <div>
+        <table style="width:650px" class="table">
+            <tr>
+                <td>Mật khẩu cũ</td>
+                <td>
+                    @Html.HiddenFor(model => model.tenDangNhap)
+                    <input type="text" name="oldpass" class="inp" />
+                </td>
+            </tr>
+
+            <tr>
+                <td>Mật khẩu mới</td>
+                <td>
+                    <input type="password" name="matkhau" class="inp" />
+                </td>
+            </tr>
+            <tr>
+                <td>Xác nhận mật khẩu mới</td>
+                <td>
+                    <input type="password" name="newpass" class="inp" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="border: none">
+                    <input type="submit" value="Lưu thông tin" class="btn" role="button" style="background-color: #0FC2C2; font-weight:bold; color: white; border-radius:30px; height:50px; width:200px; float: right" />
+
+                </td>
+            </tr>
+        </table>
+    </div>
+}
+

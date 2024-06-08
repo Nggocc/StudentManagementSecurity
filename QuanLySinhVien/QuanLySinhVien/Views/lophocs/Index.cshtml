@@ -1,0 +1,64 @@
+﻿@model IEnumerable<QuanLySinhVien.Models.lophoc>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    a {
+        text-decoration: none;
+        color: darkblue;
+        font-weight: bold;
+    }
+
+        a:hover {
+            color: orange;
+        }
+
+</style>
+<h2>
+
+    <label style="color: orange; font-weight: bold; font-size: 40px; margin-bottom: 5px">|</label>
+    Danh sách lớp học
+
+</h2>
+<table class="table">
+    <tr>
+        <th>
+            Mã lớp
+        </th>
+        <th>
+            Tên lớp
+        </th>
+        <th>
+            Giảng viên
+        </th>
+        <th>
+            Action
+        </th>
+    </tr>
+
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.maLop)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tenLop)
+        </td>
+        <td>
+            @{ 
+                QuanLySinhVien.Models.DBContext db = new QuanLySinhVien.Models.DBContext();
+                QuanLySinhVien.Models.giangvien gv = db.giangviens.FirstOrDefault(g => g.maGV == item.maGV);
+            }
+            @gv.hoTen
+        </td>
+
+        <td>
+            @Html.ActionLink("Chi tiết", "Details", new { id=item.maLop }) 
+        </td>
+    </tr>
+}
+
+</table>

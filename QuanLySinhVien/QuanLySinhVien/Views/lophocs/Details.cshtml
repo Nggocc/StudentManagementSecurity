@@ -1,0 +1,128 @@
+﻿@model QuanLySinhVien.Models.lophoc
+@using QuanLySinhVien.Models
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    a {
+        text-decoration: none;
+        color: darkblue;
+        font-weight: bold;
+    }
+
+        a:hover {
+            color: orange;
+        }
+</style>
+<h2>
+
+    <label style="color: orange; font-weight: bold; font-size: 40px; margin-bottom: 5px">|</label>
+    Chi tiết lớp học
+
+</h2>
+<hr />
+<p>
+    @Html.ActionLink("Trở về", "Index")
+</p>
+<div>
+    @{
+        DBContext db = new DBContext();
+        List<sinhvien> sinhviens = db.sinhviens.Where(s => s.maLop == Model.maLop).ToList();
+        giangvien gv = db.giangviens.FirstOrDefault(g => g.maGV == Model.maGV);
+    }
+    <table class="table">
+        <tr>
+            <td>
+                <b>Mã lớp: </b> @Model.maLop
+            </td>
+            <td>
+                <b>Tên lớp: </b> @Model.tenLop
+            </td>
+            <td>
+                <b>Giảng viên: </b> @gv.hoTen
+            </td>
+            <td>
+                @{ 
+                    int sl = 0;
+                    if (db.sinhviens.Where(s => s.maLop == Model.maLop).ToList() != null)
+                    {
+                        sl = db.sinhviens.Where(s => s.maLop == Model.maLop).Count();
+
+                    }
+                  
+                }
+                <b>Sĩ số: </b> @sl
+            </td>
+        </tr>
+    </table>
+    <br />
+    <table class="table">
+        <tr>
+            <th>
+                Mã sinh viên
+            </th>
+
+            <th>
+                Họ tên
+            </th>
+            <th>
+                Địa chỉ
+            </th>
+            <th>
+                SĐT
+            </th>
+            <th>
+                Email
+            </th>
+            <th>
+                ĐTB
+            </th>
+            <th>
+                Hình ảnh
+            </th>
+            <th>
+                Action
+            </th>
+        </tr>
+
+        @foreach (var item in sinhviens)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.maSV)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.hoTen)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.diachi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.sdt)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.email)
+                </td>
+                <td>
+                    @{
+                        double dtb = ((item.diemTX1 ?? 0) + (item.diemXT2 ?? 0) + (item.diemThi ?? 0)) / 3.0;                    }
+                    @dtb.ToString("0.0")
+                </td>
+                <td>
+                    @{
+                        string path = "~/Content/Images/" + item.hinhAnh;
+                    }
+                    <img src="@Url.Content(path)" width="150" class="img-thumbnail" />
+                </td>
+                <td>
+                    @Html.ActionLink("Chi tiết", "Details", "sinhviens", new { id = item.maSV }) |
+                    @Html.ActionLink("Sửa", "Edit", "sinhviens", new { id = item.maSV })
+                </td>
+            </tr>
+        }
+    </table>
+</div>
+
+

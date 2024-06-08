@@ -1,0 +1,80 @@
+﻿@model IEnumerable<QuanLySinhVien.Models.giangvien>
+@using QuanLySinhVien.Models
+@{
+    ViewBag.Title = "GiangVien";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    a {
+        text-decoration: none;
+        color: darkblue;
+        font-weight: bold;
+    }
+
+        a:hover {
+            color: orange;
+        }
+
+</style>
+<h2>
+
+    <label style="color: orange; font-weight:bold; font-size:40px; margin-bottom: 5px">|</label>
+    Danh sách giáo viên
+
+</h2>
+<p>
+    @Html.ActionLink("Trở về", "Index")
+</p>
+
+<table class="table">
+    <tr>
+        <th>
+            Mã giảng viên
+        </th>
+        <th>
+            Tên đăng nhập
+        </th>
+        
+        <th>
+            Họ tên
+        </th>
+        <th>
+            Địa chỉ
+        </th>
+        <th>
+            SĐT
+        </th>
+        <th>
+            Hình ảnh
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.maGV)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.tenDangNhap)
+            </td>
+           
+            <td>
+                @Html.DisplayFor(modelItem => item.hoTen)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.diachi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.sdt)
+            </td>
+            <td>
+                @{
+                    string path = "~/Content/Images/" + item.hinhAnh;
+                }
+                <img src="@Url.Content(path)" width="150" class="img-thumbnail" />
+            </td>
+        </tr>
+    }
+
+</table>

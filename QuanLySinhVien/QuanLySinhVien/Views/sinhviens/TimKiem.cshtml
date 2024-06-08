@@ -1,0 +1,126 @@
+﻿@model IEnumerable<QuanLySinhVien.Models.sinhvien>
+@{
+    ViewBag.Title = "TimKiem";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+
+}
+<style>
+    a {
+        text-decoration: none;
+        color: darkblue;
+        font-weight: bold;
+    }
+
+        a:hover {
+            color: orange;
+        }
+
+    .link {
+        background: none;
+        color: darkblue;
+        border: none;
+        padding: 0;
+        font-weight: bold;
+    }
+
+        .link:hover {
+            color: orange;
+        }
+</style>
+<h2>
+
+    <label style="color: orange; font-weight:bold; font-size:40px; margin-bottom: 5px">|</label>
+    Kết quả tìm kiếm
+
+</h2>
+@{
+    if (Model != null && Model.Any())
+    {
+        <table class="table">
+            <tr>
+                <th>
+                    Mã sinh viên
+                </th>
+                <th>
+                    Mã lớp
+                </th>
+                <th>
+                    Họ tên
+                </th>
+                <th>
+                    Địa chỉ
+                </th>
+                <th>
+                    SĐT
+                </th>
+                <th>
+                    Email
+                </th>
+                <th>
+                    ĐTB
+                </th>
+                <th>
+                    Hình ảnh
+                </th>
+                <th style="text-align: center">
+                    Action
+                </th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                using (Html.BeginForm("Delete", "sinhviens", new { id = item.maSV }, FormMethod.Post))
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.maSV)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.maLop)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.hoTen)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.diachi)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.sdt)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.email)
+                        </td>
+                        <td>
+                            @{
+                                double dtb = ((item.diemTX1 ?? 0) + (item.diemXT2 ?? 0) + (item.diemThi ?? 0)) / 3.0; }
+                            }
+                            @dtb.ToString("0.0")
+                        </td>
+                        <td>
+                            @{
+                                string path = "~/Content/Images/" + item.hinhAnh;
+                            }
+                            <img src="@Url.Content(path)" width="150" class="img-thumbnail" />
+                        </td>
+                        <td>
+                            @Html.ActionLink("Chi tiết", "Details", new { id = item.maSV }) |
+                            @Html.ActionLink("Sửa", "Edit", new { id = item.maSV }) |
+                            <input type="submit" value="Xóa" onclick="return confirm('Bạn có chắc chắn muốn xóa bản ghi này không?');" }" class="link" />
+
+                        </td>
+                    </tr>
+                }
+            }
+
+
+
+        </table>
+    }
+    else
+    {
+        <h4 style="text-align:center">Không tồn tại kết quả tìm kiếm!</h4>
+    }
+}
+
+

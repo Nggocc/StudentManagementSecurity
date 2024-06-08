@@ -1,0 +1,143 @@
+﻿@model QuanLySinhVien.Models.sinhvien
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    a {
+        text-decoration: none;
+        color: darkblue;
+        font-weight: bold;
+    }
+
+        a:hover {
+            color: orange;
+        }
+
+    .link {
+        background: none;
+        color: darkblue;
+        border: none;
+        padding: 0;
+        font-weight: bold;
+    }
+
+        .link:hover {
+            color: orange;
+        }
+</style>
+<h2>
+
+    <label style="color: orange; font-weight: bold; font-size: 40px; margin-bottom: 5px">|</label>
+    Chi tiết sinh viên
+
+</h2>
+<hr />
+<p>
+
+    @using (Html.BeginForm("Delete", "sinhviens", new { id = Model.maSV }, FormMethod.Post))
+    {
+        @Html.ActionLink("Sửa", "Edit", new { id = Model.maSV }) 
+        <label>&nbsp;|&nbsp;</label>
+        <input type = "submit" value = "Xóa" onclick = "return confirm('Bạn có chắc chắn muốn xóa bản ghi này không?');" class="link" />
+
+    }
+</p>
+<div>
+    <table class="table">
+        <tr>
+            <th>
+                Mã sinh viên
+            </th>
+            <th>
+                Mã lớp
+            </th>
+            <th>
+                Tên đăng nhập
+            </th>
+            <th>
+                Họ tên
+            </th>
+            <th>
+                Địa chỉ
+            </th>
+            <th>
+                SĐT
+            </th>
+            <th>
+                Email
+            </th>
+            <th>
+                Điểm tx1
+            </th>
+            <th>
+                Điểm tx2
+            </th>
+            <th>
+                Điểm thi
+            </th>
+            <th>
+                ĐTB
+            </th>
+            <th>
+                Hình ảnh
+            </th>
+        </tr>
+
+        <tr>
+            <td>
+                @Model.maSV
+            </td>
+            <td>
+                @Model.maLop
+
+            </td>
+            <td>
+                @Model.tenDangNhap
+            </td>
+            <td>
+                @Model.hoTen
+            </td>
+            <td>
+                @Model.diachi
+            </td>
+            <td>
+                @Model.sdt
+            </td>
+            <td>
+                @Model.email
+            </td>
+            <td>
+                @Model.diemTX1
+            </td>
+            <td>
+                @Model.diemXT2
+            </td>
+            <td>
+                @Model.diemThi
+            </td>
+            <td>
+                @{
+                    double dtb = ((Model.diemTX1 ?? 0) + (Model.diemXT2 ?? 0) + (Model.diemThi ?? 0)) / 3.0; }
+                @dtb.ToString("0.0")
+            </td>
+            <td>
+                @{
+                    string path = "~/Content/Images/" + Model.hinhAnh;
+                }
+                <img src="@Url.Content(path)" width="150" class="img-thumbnail" />
+            </td>
+        </tr>
+    </table>
+</div>
+
+@if (TempData["DeleteSuccess"] != null && (bool)TempData["DeleteSuccess"])
+{
+    <script>
+        $(function () {
+            // Show success message
+            alert("Đã xóa thành công!");
+        });
+    </script>
+}
