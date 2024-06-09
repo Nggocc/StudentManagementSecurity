@@ -14,6 +14,18 @@
         a:hover {
             color: orange;
         }
+
+    .link {
+        background: none;
+        color: darkblue;
+        border: none;
+        padding: 0;
+        font-weight: bold;
+    }
+
+        .link:hover {
+            color: orange;
+        }
 </style>
 <h2>
 
@@ -43,14 +55,14 @@
                 <b>Giảng viên: </b> @gv.hoTen
             </td>
             <td>
-                @{ 
+                @{
                     int sl = 0;
                     if (db.sinhviens.Where(s => s.maLop == Model.maLop).ToList() != null)
                     {
                         sl = db.sinhviens.Where(s => s.maLop == Model.maLop).Count();
 
                     }
-                  
+
                 }
                 <b>Sĩ số: </b> @sl
             </td>
@@ -88,39 +100,44 @@
 
         @foreach (var item in sinhviens)
         {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.maSV)
-                </td>
+            using (Html.BeginForm("Delete", "sinhviens", new { id = item.maSV }, FormMethod.Post))
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.maSV)
+                    </td>
 
-                <td>
-                    @Html.DisplayFor(modelItem => item.hoTen)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.diachi)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.sdt)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.email)
-                </td>
-                <td>
-                    @{
-                        double dtb = ((item.diemTX1 ?? 0) + (item.diemXT2 ?? 0) + (item.diemThi ?? 0)) / 3.0;                    }
-                    @dtb.ToString("0.0")
-                </td>
-                <td>
-                    @{
-                        string path = "~/Content/Images/" + item.hinhAnh;
-                    }
-                    <img src="@Url.Content(path)" width="150" class="img-thumbnail" />
-                </td>
-                <td>
-                    @Html.ActionLink("Chi tiết", "Details", "sinhviens", new { id = item.maSV }) |
-                    @Html.ActionLink("Sửa", "Edit", "sinhviens", new { id = item.maSV })
-                </td>
-            </tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.hoTen)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.diachi)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.sdt)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.email)
+                    </td>
+                    <td>
+                        @{
+                            double dtb = ((item.diemTX1 ?? 0) + (item.diemXT2 ?? 0) + (item.diemThi ?? 0)) / 3.0; }
+                        @dtb.ToString("0.0")
+                    </td>
+                    <td>
+                        @{
+                            string path = "~/Content/Images/" + item.hinhAnh;
+                        }
+                        <img src="@Url.Content(path)" width="150" class="img-thumbnail" />
+                    </td>
+                    <td>
+                        @Html.ActionLink("Chi tiết", "Details", "sinhviens", new { id = item.maSV }) |
+                        @Html.ActionLink("Sửa", "Edit", "sinhviens", new { id = item.maSV }) | 
+                        <input type="submit" value="Xóa" onclick="return confirm('Bạn có chắc chắn muốn xóa bản ghi này không?');" }" class="link" />
+
+                    </td>
+                </tr>
+            }
         }
     </table>
 </div>

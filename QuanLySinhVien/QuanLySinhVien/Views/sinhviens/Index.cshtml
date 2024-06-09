@@ -1,5 +1,5 @@
 ﻿@model IEnumerable<QuanLySinhVien.Models.sinhvien>
-
+@using QuanLySinhVien.Models
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -34,10 +34,16 @@
     Danh sách sinh viên
 
 </h2>
-<p>
+<p style="font-size: 20px">
     @Html.ActionLink("Thêm mới sinh viên", "Create")
 </p>
-
+<p style="float: right; color: orange">
+    @{ 
+        DBContext db = new DBContext();
+        int sum = db.sinhviens.Count();
+    }
+    <b>Tổng số sinh viên: @sum</b>
+</p>
 <table class="table">
     <tr>
         <th>
